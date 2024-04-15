@@ -24,7 +24,7 @@ HELPABLE = {}
 
 async def fallen_boot():
     with console.status(
-        "[magenta] Booting Lucky Music...",
+        "[magenta] Bᴏᴏᴛɪɴɢ sᴇɪsᴛᴀ ᴍᴜsɪᴄ...",
     ) as status:
         console.print("┌ [red]Clearing MongoDB Cache...")
         try:
@@ -81,7 +81,7 @@ async def fallen_boot():
     try:
         await app.send_message(
             config.LOGGER_ID,
-            f"<b>➻ ʟᴜᴄᴋʏ ᴍᴜsɪᴄ ʙᴏᴛ 🔮\n\n❄ ɪᴅ :</b> `{BOT_ID}`\n✨ <b>ɴᴀᴍᴇ :</b> {BOT_NAME}\n☁ <b>ᴜsᴇʀɴᴀᴍᴇ :</b> @{BOT_USERNAME}",
+            f"<b>➻ Sᴇɪsᴛᴀ ᴍᴜsɪᴄ ʙᴏᴛ 🔮\n\n❄ ɪᴅ :</b> `{BOT_ID}`\n✨ <b>ɴᴀᴍᴇ :</b> {BOT_NAME}\n☁ <b>ᴜsᴇʀɴᴀᴍᴇ :</b> @{BOT_USERNAME}",
         )
     except Exception as e:
         print(
@@ -97,7 +97,7 @@ async def fallen_boot():
     try:
         await Ass.send_message(
             config.LOGGER_ID,
-            f"<b>➻ ʟᴜᴄᴋʏ ᴍᴜsɪᴄ ᴀssɪsᴛᴀɴᴛ 🔮\n\n❄ ɪᴅ :</b> `{ASSID}`\n✨ <b>ɴᴀᴍᴇ :</b> {ASSNAME}\n☁ <b>ᴜsᴇʀɴᴀᴍᴇ :</b> @{ASSUSERNAME}",
+            f"<b>➻ Sᴇɪsᴛᴀ ᴍᴜsɪᴄ ᴀssɪsᴛᴀɴᴛ 🔮\n\n❄ ɪᴅ :</b> `{ASSID}`\n✨ <b>ɴᴀᴍᴇ :</b> {ASSNAME}\n☁ <b>ᴜsᴇʀɴᴀᴍᴇ :</b> @{ASSUSERNAME}",
         )
     except Exception as e:
         print(
@@ -189,80 +189,4 @@ async def start_command(_, message):
                 parse_mode="markdown",
                 reply_markup=key,
             )
-    return await message.reply_photo(
-        photo=config.START_IMG,
-        caption=home_text_pm,
-        reply_markup=InlineKeyboardMarkup(
-        [
-            [
-                InlineKeyboardButton(
-                    text="ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴩ", url=f"https://t.me/{BOT_USERNAME}?startgroup=true"
-                ),
-            ],
-            [
-                InlineKeyboardButton(
-                    text="❄ ʜᴇʟᴩ ❄", callback_data="fallen_help"
-                ),
-                InlineKeyboardButton(
-                    text="🥀 ᴏᴡɴᴇʀ 🥀", user_id=F_OWNER
-                )
-            ],
-            [
-                InlineKeyboardButton(
-                    text="✨ sᴜᴩᴩᴏʀᴛ ✨", url=config.SUPPORT_CHAT
-                ),
-                InlineKeyboardButton(
-                    text="💘 ᴄʜᴀɴɴᴇʟ 💘", url=config.SUPPORT_CHANNEL
-                ),
-            ],
-            [
-                InlineKeyboardButton(
-                    text="☁ sᴏᴜʀᴄᴇ ᴄᴏᴅᴇ ☁", url="https://github.com/mrluckyxd/LUCKY-MUSICX"
-                )
-            ],
-        ]
-    ),
- )
-
-
-@app.on_callback_query(filters.regex("fallen_home"))
-async def fallen_home(_, CallbackQuery):
-    await CallbackQuery.answer("ғᴀʟʟᴇɴ ʜᴏᴍᴇ")
-    await CallbackQuery.message.edit_text(
-        text=home_text_pm,
-        reply_markup=InlineKeyboardMarkup(
-        [
-            [
-                InlineKeyboardButton(
-                    text="ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴩ", url=f"https://t.me/{BOT_USERNAME}?startgroup=true"
-                ),
-            ],
-            [
-                InlineKeyboardButton(
-                    text="❄ ʜᴇʟᴩ ❄", callback_data="fallen_help"
-                ),
-                InlineKeyboardButton(
-                    text="🥀 ᴏᴡɴᴇʀ 🥀", user_id=F_OWNER
-                )
-            ],
-            [
-                InlineKeyboardButton(
-                    text="✨ sᴜᴩᴩᴏʀᴛ ✨", url=config.SUPPORT_CHAT
-                ),
-                InlineKeyboardButton(
-                    text="💘 ᴄʜᴀɴɴᴇʟ 💘", url=config.SUPPORT_CHANNEL
-                ),
-            ],
-            [
-                InlineKeyboardButton(
-                    text="☁ sᴏᴜʀᴄᴇ ᴄᴏᴅᴇ ☁", url="https://github.com/MRLUCKYXD/LUCKY-MUSICX"
-                )
-            ],
-        ]
-    ),
- )
-
-
-
-if __name__ == "__main__":
-    loop.run_until_complete(fallen_boot())
+     
